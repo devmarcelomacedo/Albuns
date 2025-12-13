@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: sans-serif;
+}
+
+.player-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 90%; /* Responsividade: Ocupa 90% da largura do pai */
+    max-width: 400px; /* Limite o tamanho máximo em telas grandes */
+    text-align: center;
+}
+
+.capa-musica img {
+    width: 100%;
+    max-width: 200px; /* Limite o tamanho da imagem */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* --- Controles e Progresso --- */
+.controles-progresso {
+    margin: 20px 0;
+}
+
+.barra-progresso-container {
+    background-color: #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 8px;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.barra-progresso {
+    background-color: #3f51b5;
+    border-radius: 5px;
+    height: 100%;
+    width: 0%; /* O JS controlará isso */
+    transition: width 0.1s linear;
+}
+
+.tempo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+}
+
+/* --- Botões de Controle --- */
+.botoes-controles {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn-controle {
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-controle:hover {
+    background-color: #303f9f;
+}
+
+/* --- Media Query para telas menores --- */
+@media (max-width: 600px) {
+    .player-container {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .btn-controle {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
